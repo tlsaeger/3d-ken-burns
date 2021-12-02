@@ -82,16 +82,15 @@ if __name__ == '__main__':
 		'intCropHeight': int(math.floor(0.97 * intHeight))
 	}
 
-	objTo = process_autozoom({
-		'fltShift': 100.0,
-		'fltZoom': 10000000000000000000000000000000000000000000000000000000,
-		'objFrom': objFrom
+	objectTo = process_autozoom({
+		'dblShift': 10.0,
+		'dblZoom': 10000000000000000000000000000000000000000000000000000000,
+		'objectFrom': objectFrom
 	})
-
-	npyResult = process_kenburns({
-		'fltSteps': numpy.linspace(0.0, 1.0, 75).tolist(),
-		'objFrom': objFrom,
-		'objTo': objTo,
+	numpyResult = process_kenburns({
+		'dblSteps': numpy.linspace(0.0, 8.0, 400).tolist(),
+		'objectFrom': objectFrom,
+		'objectTo': objectTo,
 		'boolInpaint': True
 	})
 
